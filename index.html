@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="fr" class="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ComptaLink | Expertise Comptable Digitale</title>
+    
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=Plus+Jakarta+Sans:wght@400;700;800&family=Montserrat:wght@400;700;900&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              display: ['var(--font-display)', 'sans-serif'],
+              body: ['var(--font-body)', 'sans-serif'],
+            },
+            colors: {
+              primary: {
+                DEFAULT: 'var(--color-primary)',
+                dark: 'var(--color-primary-dark)',
+              },
+              secondary: 'var(--color-secondary)',
+              accent: 'var(--color-accent)',
+              surface: 'var(--color-bg-light)',
+              'surface-dark': 'var(--color-bg-dark)',
+            },
+            borderRadius: {
+              'theme': 'var(--radius-theme)',
+            },
+            boxShadow: {
+              'theme': 'var(--shadow-theme)',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      :root {
+        /* Ces valeurs seront écrasées dynamiquement par useTheme.ts */
+        --color-primary: #1d85ed;
+        --color-primary-dark: #0f172a;
+        --color-secondary: #475569;
+        --color-accent: #38bdf8;
+        --color-bg-light: #f8fafc;
+        --color-bg-dark: #020617;
+        --font-display: 'Manrope';
+        --font-body: 'Manrope';
+        --radius-theme: 16px;
+        --shadow-theme: 0 10px 30px -5px rgba(29, 133, 237, 0.1);
+        
+        transition: all 0.5s ease-in-out;
+      }
+      
+      body {
+        font-family: var(--font-body), sans-serif;
+        background-color: var(--color-bg-light);
+        color: #1e293b;
+      }
+
+      .dark body {
+        background-color: var(--color-bg-dark);
+        color: #f8fafc;
+      }
+
+      /* On force l'application des arrondis du thème sur les classes Tailwind standard */
+      .rounded-xl, .rounded-2xl, .rounded-3xl, .rounded-\[2rem\], .rounded-\[2\.5rem\], .rounded-\[3rem\], .rounded-\[3\.5rem\], .rounded-\[4rem\], .rounded-\[5rem\] {
+        border-radius: var(--radius-theme) !important;
+      }
+
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+    </style>
+    <script type="importmap">
+    {
+      "imports": {
+        "react": "https://aistudiocdn.com/react@^19.2.0",
+        "react/": "https://aistudiocdn.com/react@^19.2.0/",
+        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+        "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.6",
+        "@google/genai": "https://esm.sh/@google/genai@^1.33.0",
+        "mammoth": "https://esm.sh/mammoth@^1.11.0",
+        "browser-image-compression": "https://esm.sh/browser-image-compression@^2.0.2",
+        "jspdf": "https://esm.sh/jspdf@^3.0.4",
+        "jspdf-autotable": "https://esm.sh/jspdf-autotable@^5.0.2",
+        "idb": "https://esm.sh/idb@^8.0.3"
+      }
+    }
+    </script>
+</head>
+  <body class="antialiased selection:bg-primary/20">
+    <div id="root"></div>
+  </body>
+</html>
